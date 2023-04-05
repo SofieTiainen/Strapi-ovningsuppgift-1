@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "singularName": "student",
+    "pluralName": "students",
+    "displayName": "Student",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Firstname": {
+      "type": "string",
+      "required": true
+    },
+    "Surname": {
+      "type": "string",
+      "required": true
+    },
+    "Age": {
+      "type": "integer"
+    },
+    "Education": {
+      "type": "enumeration",
+      "enum": [
+        "Sjuksköterska",
+        "Läkare",
+        "Snickare",
+        "Byggare"
+      ]
+    },
+    "courses": {
+      "type": "component",
+      "repeatable": true,
+      "component": "courses.courses"
+    },
+    "teacher": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::teacher.teacher",
+      "inversedBy": "students"
+    }
+  }
+}

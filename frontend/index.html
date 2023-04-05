@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>My first strapi application</h1>
+    <h2 id="schoolName">Placeholder</h2>
+    <h3 id="">Kontakta oss: <span id="contactEmail"></span></h3>
+    <h3>Currently teaching <span id="amountOfStudents"></span> students in <span id="location"></span></h3>
+
+
+    <h2>Student list</h2>
+    <select class="select" name="select" id="select">
+        <option value="" hidden>Sortera genom utbildning</option>
+        <option value="Alla">Alla utbildningar</option>
+        <option value="Snickare">Snickare</option>
+        <option value="Byggare">Byggare</option>
+        <option value="Läkare">Läkare</option>
+        <option value="Sjuksköterska">Sjuksköterska</option>
+    </select>
+    <select class="sortByAge" name="sortByAge" id="sortByAge">
+        <option value="" hidden>Sortera listan baserat på ålder</option>
+        <option value="Youngest to oldest">Yngst till äldst</option>
+        <option value="Oldest to youngest">Äldst till yngst</option>
+    </select>
+    <div class="allStudents"></div>
+</body>
+
+
+</html>
